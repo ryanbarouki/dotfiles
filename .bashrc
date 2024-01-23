@@ -84,8 +84,8 @@ alias swapcaps='setxkbmap -option ctrl:swapcaps'
 alias v='nvim'
 
 # fuzzy finding shortcut
-alias sd="cd ~ && cd \$(find ~/.config/* ~/.local/* * -type d | fzf)"
-alias sdo="cd ~ && cd \$(find ~/.config/* ~/.local/* * -type d | fzf) && nvim ."
+alias sd="cd ~ && cd \$(find ~/.config/* ~/.local -type d | fzf)"
+alias sdo="cd ~ && cd \$(find ~/.config/* ~/.local/* -type d | fzf) && nvim ."
 
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"

@@ -10,6 +10,9 @@ launch_bar() {
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
+	# WARNING: this will not work for all themes now
+	# use commented code below for that
+
 	# Launch the bar
 	for m in $(polybar --list-monitors | cut -d":" -f1); do
 		MONITOR=$m polybar -q main -c "$dir/$style/config.ini" &
