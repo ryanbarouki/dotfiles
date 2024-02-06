@@ -1,3 +1,4 @@
+vim.g.cmptoggle = false
 return {
   "hrsh7th/nvim-cmp",
   version = false, -- last release is way too old
@@ -15,7 +16,9 @@ return {
     return {
       completion = {
         completeopt = "menu,menuone,noinsert",
-        autocomplete = false,
+        enabled = function()
+          return vim.g.cmptoggle
+        end,
       },
       snippet = {
         expand = function(args)

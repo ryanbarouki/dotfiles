@@ -1,0 +1,3 @@
+configuration {
+  modi: "drun,settings:~/.local/bin/rofi-control-center.py";
+

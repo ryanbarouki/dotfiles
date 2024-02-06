@@ -13,3 +13,5 @@
 	path = nvim
 [difftool]
 	prompt = false
+[core]
+	editor = nvim
