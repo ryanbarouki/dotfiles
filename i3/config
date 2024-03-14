@@ -187,14 +187,20 @@ mode "resize" {
 }
 
 # gaps
-for_window [class=".*"] border pixel 2
+
+for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps outer 2
+
+smart_borders on
+smart_borders no_gaps
+# Enable rounded corners and drop shadow
+exec --no-startup-id picom --experimental-backends --config $HOME/.config/picom/picom.conf
 
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --shapes
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --new_bar
 
 # Background 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/nvim/bg.png

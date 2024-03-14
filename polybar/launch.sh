@@ -77,6 +77,10 @@ elif [[ "$1" == "--panels" ]]; then
 	style="panels"
 	launch_bar
 
+elif [[ "$1" == "--new_bar" ]]; then
+	style="new_bar"
+	launch_bar
+
 else
 	cat <<-EOF
 		Usage : launch.sh --theme
