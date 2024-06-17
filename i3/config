@@ -202,6 +202,9 @@ bindsym $mod+r mode "resize"
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --new_bar
 
+# Battery checker
+exec_always --no-startup-id $HOME/.config/i3/battery
+
 # Background 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/nvim/bg.png
 

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while :; do
+	POWER=$(acpi -b | grep "Battery" | grep -o '[0-9]\+%' | tr -d '%' | awk '$1 != 0')
+	if [[ $POWER -le 10 ]]; then
+		notify-send "Battery power is lower than 10%!"
+	fi
+	sleep 30
+done
