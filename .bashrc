@@ -82,6 +82,7 @@ alias unpairpods='bluetoothctl disconnect 00:C5:85:E1:9C:45'
 alias pairkeys='bluetoothctl connect DC:2C:26:15:DA:15'
 alias swapcaps='setxkbmap -option ctrl:swapcaps'
 alias vi='nvim'
+alias unzip-latest='unzip "$(ls -t | head -n 1)"'
 
 # fuzzy finding shortcut
 alias sd="cd ~ && cd \$(find ~/.config/* ~/.local ~/* -type d | fzf)"

@@ -15,3 +15,5 @@
 	prompt = false
 [core]
 	editor = nvim
+[pull]
+	rebase = false
